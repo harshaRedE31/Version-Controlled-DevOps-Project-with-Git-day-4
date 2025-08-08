@@ -1,0 +1,8 @@
+# Switch to the dev branch to start development
+git checkout dev
+
+# Add the .gitignore file to the staging area
+git add .gitignore
+
+# Commit the file with a descriptive message
+git commit -m "feat: Add .gitignore to exclude system and log files"

@@ -1,0 +1,138 @@
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ git branch dev
+fatal: not a valid object name: 'main'
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ mkdir Screenshots
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ touch Screenshots/.gitkeep
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ git add Screenshots
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ git commit -m "feat: Add initial screenshots directory"
+[main (root-commit) adcdb43] feat: Add initial screenshots directory
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Screenshots/.gitkeep
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ git checkout -b dev
+Switched to a new branch 'dev'
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (dev)
+$ git add .gitignore
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (dev)
+$ git commit -m "feat: Add .gitignore to exclude system and log files"
+[dev d87a641] feat: Add .gitignore to exclude system and log files
+ 1 file changed, 8 insertions(+)
+ create mode 100644 .gitignore
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (dev)
+$ git add README.md
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (dev)
+$ git commit -m "docs: Create initial README.md"
+[dev 5f9786b] docs: Create initial README.md
+ 1 file changed, 24 insertions(+)
+ create mode 100644 README.md
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (dev)
+$ git remote add origin https://github.com/harshaRedE31/Version-Controlled-DevOps-Project-with-Git-day-4
+error: remote origin already exists.
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (dev)
+$ git push -u origin dev
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 1.37 KiB | 279.00 KiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/harshaRedE31/Version-Controlled-DevOps-Project-with-Git-day-4.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (dev)
+$ git push -u origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'main' on GitHub by visiting:
+remote:      https://github.com/harshaRedE31/Version-Controlled-DevOps-Project-with-Git-day-4/pull/new/main
+remote:
+To https://github.com/harshaRedE31/Version-Controlled-DevOps-Project-with-Git-day-4.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (dev)
+$ git checkout -b feature/add-app-file
+Switched to a new branch 'feature/add-app-file'
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (feature/add-app-file)
+$ vim app.py
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (feature/add-app-file)
+$ git add app.py
+warning: in the working copy of 'app.py', LF will be replaced by CRLF the next time Git touches it
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (feature/add-app-file)
+$ git commit -m "python file"
+[feature/add-app-file 4add712] python file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 app.py
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (feature/add-app-file)
+$ git push -u origin feature/add-app-file
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'feature/add-app-file' on GitHub by visiting:
+remote:      https://github.com/harshaRedE31/Version-Controlled-DevOps-Project-with-Git-day-4/pull/new/feature/add-app-file
+remote:
+To https://github.com/harshaRedE31/Version-Controlled-DevOps-Project-with-Git-day-4.git
+ * [new branch]      feature/add-app-file -> feature/add-app-file
+branch 'feature/add-app-file' set up to track 'origin/feature/add-app-file'.
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (feature/add-app-file)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ git pull orgin main
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ git pull main
+fatal: 'main' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ git tag -a v1.0.0 -m "Initial release"
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$ git push origin v1.0.0
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 171 bytes | 171.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/harshaRedE31/Version-Controlled-DevOps-Project-with-Git-day-4.git
+ * [new tag]         v1.0.0 -> v1.0.0
+
+harshavardhanreddy@harsha_potter31 MINGW64 ~/Downloads/Version-Controlled-DevOps-Project-with-Git-day-4 (main)
+$
